@@ -8,13 +8,11 @@
  <div class="modal-body row">
    <div class="col-md-6 text-right">
      <!-- Your first column here -->
-     <img src="../assets/pic1_pueblo1.jpg" class="img-thumbnail" alt="Cinque Terre" width="404" height="336">
+     <img src="../assets/pueblo1/pic1_pueblo1.jpg" class="img-thumbnail" alt="Cinque Terre" width="404" height="336">
    </div>
    <div class="col-md-6">
      <!-- Your second column here -->
-     <script id="nuestra-plantilla" type="text/x-handlebars-template">
-       <p>Hola {{usuario}}</p>
-     </script>
+     {{page1}}
    </div>
  </div>
 </div>
@@ -46,6 +44,6 @@
 <script>
 export default {
   name: 'catastro',
-  props:['nombre'],
+  props:['nombre','page1'],
 };
 </script>

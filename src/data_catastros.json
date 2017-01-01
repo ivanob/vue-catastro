@@ -1,5 +1,7 @@
 {
   "data": [
-    {"nombre": "Lugar de Quintanilla"}
+    {"nombre": "Lugar de Quintanilla",
+    "numPaginas": 2,
+    "path": "./assets/pueblo1"}
   ]
 }
