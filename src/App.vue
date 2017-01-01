@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Catastro :nombre="nombre" ></Catastro>
+    <Catastro :nombre="nombre" :page1="page1"></Catastro>
   </div>
 </template>
 
@@ -17,12 +17,12 @@ export default {
     return {
       nombre: data.data[0].nombre
     };
-  }/*,
-  computed() {
-    return {
-      page1: "<p>Esto es la pagina 1</p>"
+  },
+  computed: {
+    page1: function () {
+      return "<p>Esto es la pagina 1</p>"
     }
-  }*/
+  }
 };
 </script>
 
