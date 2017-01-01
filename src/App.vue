@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <Catastro></Catastro>
+    <Catastro :nombre="nombre"></Catastro>
   </div>
 </template>
 
 <script>
 import Catastro from './components/Catastro';
+import data from './data_catastros.json';
 
 export default {
   name: 'app',
   components: {
     Catastro,
   },
+  data() {
+    return {
+      nombre: data.data[0].nombre,
+    };
+  }
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="catastro">
     <div class="page-header text-center">
-   <h1>Lugar de Quintanilla </h1>
+   <h1>{{nombre}}</h1>
 
  </div>
 <div class="wrapper container">
@@ -46,10 +46,6 @@
 <script>
 export default {
   name: 'catastro',
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-    };
-  },
+  props:['nombre'],
 };
 </script>
