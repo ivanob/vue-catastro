@@ -2,7 +2,6 @@
   <div class="catastro">
     <div class="page-header text-center">
    <h1>{{nombre}}</h1>
-
  </div>
 <div class="wrapper container">
  <div class="modal-body row">
@@ -19,7 +18,11 @@
 </div>
 
  <div class="text-center">
- <nav aria-label="Page navigation">
+   <pagination :current-page="pageOne.currentPage"
+                 :total-pages="pageOne.totalPages"
+                 @page-changed="pageOneChanged">
+     </pagination>
+ <!--<nav aria-label="Page navigation">
  <ul class="pagination">
  <li>
    <a href="#" aria-label="Previous">
@@ -37,14 +40,32 @@
    </a>
  </li>
  </ul>
- </nav>
+ </nav>-->
  </div>
   </div>
 </template>
 
 <script>
+import Pagination from './Pagination.vue'
+
 export default {
   name: 'catastro',
+  components : { Pagination },
   props:['nombre','page1'],
+  data() {
+        return {
+            pageOne: {
+                currentPage: 1,
+                totalPages: 10
+            }
+        }
+    },
+
+    methods: {
+        pageOneChanged (pageNum) {
+            this.pageOne.currentPage = pageNum
+        }
+    }
 };
+
 </script>
