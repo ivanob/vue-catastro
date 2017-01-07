@@ -12,7 +12,7 @@
    <div class="col-md-6 text-left">
      <!-- Your second column here -->
      <!--{{page1}}-->
-     <div v-html="page1"></div>
+     <div v-html="selectedPage"></div>
    </div>
  </div>
 </div>
@@ -32,26 +32,25 @@ import Pagination from './Pagination.vue'
 export default {
   name: 'catastro',
   components : { Pagination },
-  props:['nombre','page1','numPaginas'],
+  props:['nombre','pages','numPaginas'],
   data() {
-      return {
-          pageOne: {
-              currentPage: 1,
-            //  totalPages: numPaginas
-          }
-      }
-    },
+    return {currentPage: 1}
+  },
+
     computed: {
      totalPages() {
        return this.numPaginas;
      },
-     currentPage() {
+     /*currentPage() {
        return 1;
+     },*/
+     selectedPage() {
+       return this.pages[this.currentPage-1]
      }
   },
   methods: {
       pageOneChanged: function (pageNum) {
-          this.pageOne.currentPage = pageNum
+          this.currentPage = pageNum
       }
   }
 };
