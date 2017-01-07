@@ -6,7 +6,7 @@
 
 <script>
 import Catastro from './components/Catastro';
-import data from './data_catastros.json';
+import info from './data_catastros.json';
 
 export default {
   name: 'app',
@@ -15,9 +15,9 @@ export default {
   },
   data() {
     return {
-      nombre: data.data[0].nombre,
-      numPaginas: data.data[0].numPaginas,
-      pages: ["<p>Esto es la pagina 1</p>", "<p>Esto es la pagina 2</p>"]
+      nombre: info[0].nombre,
+      numPaginas: info[0].paginas.length,
+      pages: info[0].paginas
     };
   },
   /*computed: {

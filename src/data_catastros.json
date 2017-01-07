@@ -1,7 +1,19 @@
-{
-  "data": [
-    {"nombre": "Lugar de Quintanilla",
-    "numPaginas": 5,
-    "path": "./assets/pueblo1"}
-  ]
-}
+[
+  {
+  "nombre": "Lugar de Quintanilla",
+  "paginas": [
+            {
+              "scan":"static/pueblo1/scan1.jpg",
+              "transcripcion": "<p>Esto es la pagina 1</p>"
+            },
+            {
+              "scan":"static/pueblo1/scan2.jpg",
+              "transcripcion": "<p>Esto es la pagina 2</p>"
+            },
+            {
+              "scan":"static/pueblo1/scan3.jpg",
+              "transcripcion": "<p>Esto es la pagina 3</p>"
+            }
+    ]
+  }
+]

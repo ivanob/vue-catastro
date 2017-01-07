@@ -7,12 +7,12 @@
  <div class="modal-body row">
    <div class="col-md-6 text-right">
      <!-- Your first column here -->
-     <img src="../assets/pueblo1/pic1_pueblo1.jpg" class="img-thumbnail" alt="Cinque Terre" width="404" height="336">
+     <img :src="selectedPage.scan" class="img-thumbnail" alt="Cinque Terre" width="404" height="336">
    </div>
    <div class="col-md-6 text-left">
      <!-- Your second column here -->
      <!--{{page1}}-->
-     <div v-html="selectedPage"></div>
+     <div v-html="selectedPage.transcripcion"></div>
    </div>
  </div>
 </div>
