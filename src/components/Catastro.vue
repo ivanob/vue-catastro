@@ -18,8 +18,8 @@
 </div>
 
    <div class="text-center">
-     <pagination :current-page="pageOne.currentPage"
-                   :total-pages="pageOne.totalPages"
+     <pagination :current-page="currentPage"
+                   :total-pages="totalPages"
                    @page-changed="pageOneChanged">
        </pagination>
    </div>
@@ -32,21 +32,28 @@ import Pagination from './Pagination.vue'
 export default {
   name: 'catastro',
   components : { Pagination },
-  props:['nombre','page1'],
+  props:['nombre','page1','numPaginas'],
   data() {
-        return {
-            pageOne: {
-                currentPage: 5,
-                totalPages: 5
-            }
-        }
+      return {
+          pageOne: {
+              currentPage: 1,
+            //  totalPages: numPaginas
+          }
+      }
     },
-
-    methods: {
-        pageOneChanged: function (pageNum) {
-            this.pageOne.currentPage = pageNum
-        }
-    }
+    computed: {
+     totalPages() {
+       return this.numPaginas;
+     },
+     currentPage() {
+       return 1;
+     }
+  },
+  methods: {
+      pageOneChanged: function (pageNum) {
+          this.pageOne.currentPage = pageNum
+      }
+  }
 };
 
 </script>
