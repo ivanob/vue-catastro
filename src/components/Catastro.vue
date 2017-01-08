@@ -7,11 +7,11 @@
  <div class="modal-body row">
    <div class="col-md-6 text-right">
      <!-- Your first column here -->
-     <img :src="selectedPage.scan" class="img-thumbnail" alt="Cinque Terre" width="404" height="336">
+      <!--<img id="zoom_07" :src="selectedPage.scan" class="img-thumbnail" width="404" height="336" data-zoom-image="static/pueblo1/scan1.jpg">-->
+      <img id="zoom_01" src='static/pueblo1/image-small.jpg' data-zoom-image="static/pueblo1/image-big.jpg"/>
    </div>
    <div class="col-md-6 text-left">
      <!-- Your second column here -->
-     <!--{{page1}}-->
      <div v-html="selectedPage.transcripcion"></div>
    </div>
  </div>
@@ -26,8 +26,15 @@
   </div>
 </template>
 
-<script>
+<script lang="babel">
 import Pagination from './Pagination.vue'
+//window.jQuery = require('jquery');
+//window.$ = window.jQuery;
+//require('../../static/js/jquery-1.8.3.min.js')
+//require('../../static/js/jquery.elevateZoom-3.0.8.min.js')
+//require('../../static/js/jquery.elevatezoom.js')
+require('magnify')
+
 
 export default {
   name: 'catastro',
@@ -52,7 +59,24 @@ export default {
       pageOneChanged: function (pageNum) {
           this.currentPage = pageNum
       }
+  },
+  mounted() {
+    console.log('HOLA')
+    console.log($(".zoom"))
+    console.log(this)
+    $('#zoom_01').elevateZoom({
+    zoomType: "inner",
+    cursor: "crosshair",
+    zoomWindowFadeIn: 500,
+    zoomWindowFadeOut: 750
+       });
+    /*$("#zoom_07").elevateZoom({
+      zoomType : "lens",
+      lensShape : "round",
+      lensSize : 200
+    });*/
   }
 };
+
 
 </script>
