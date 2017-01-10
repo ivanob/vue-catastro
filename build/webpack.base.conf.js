@@ -53,6 +53,10 @@ module.exports = {
         loader: 'vue'
       },
       {
+        test: /\.html$/,
+        loader: 'vue-html-loader'
+      },
+      {
         test: /\.js$/,
         loader: 'babel',
         include: projectRoot,

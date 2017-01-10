@@ -12,7 +12,8 @@
    </div>
    <div class="col-md-6 text-left">
      <!-- Your second column here -->
-     <div v-html="selectedPage.transcripcion"></div>
+     <!--<div v-html="selectedPage.transcripcion"></div>-->
+     <div v-html="selectedPage"></div>
    </div>
  </div>
 </div>
@@ -52,7 +53,8 @@ export default {
        return 1;
      },*/
      selectedPage() {
-       return this.pages[this.currentPage-1]
+       //return this.pages[this.currentPage-1]
+       return require('../../static/pueblo1/trans1.html')
      }
   },
   methods: {
@@ -65,16 +67,17 @@ export default {
     console.log($(".zoom"))
     console.log(this)
     $('#zoom_01').elevateZoom({
-    zoomType: "inner",
-    cursor: "crosshair",
-    zoomWindowFadeIn: 500,
-    zoomWindowFadeOut: 750
-       });
-    /*$("#zoom_07").elevateZoom({
+      zoomType: "inner",
       zoomType : "lens",
       lensShape : "round",
-      lensSize : 200
-    });*/
+      zoomWindowFadeIn: 500,
+      zoomWindowFadeOut: 750
+    });
+  /*  this.$http.get('../../static/pueblo1/scan1.jpg').then((response) => {
+        console.log("BIEEN")
+      }, (response) => {
+        // error callback
+      });*/
   }
 };
 
