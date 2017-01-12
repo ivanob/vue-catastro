@@ -4,15 +4,15 @@
   "paginas": [
             {
               "scan":"static/pueblo1/scan1.jpg",
-              "transcripcion": "<p>Esto es la pagina 1</p>"
+              "transcripcion": "static/pueblo1/trans1.html"
             },
             {
               "scan":"static/pueblo1/scan2.jpg",
-              "transcripcion": "<p>Esto es la pagina 2</p>"
+              "transcripcion": "static/pueblo1/trans2.html"
             },
             {
               "scan":"static/pueblo1/scan3.jpg",
-              "transcripcion": "<p>Esto es la pagina 3</p>"
+              "transcripcion": "static/pueblo1/trans3.html"
             }
     ]
   }

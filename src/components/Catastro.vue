@@ -13,7 +13,7 @@
    <div class="col-md-6 text-left">
      <!-- Your second column here -->
      <!--<div v-html="selectedPage.transcripcion"></div>-->
-     <div v-html="selectedPage"></div>
+     <div v-html="selectedTranscription"></div>
    </div>
  </div>
 </div>
@@ -29,11 +29,7 @@
 
 <script lang="babel">
 import Pagination from './Pagination.vue'
-//window.jQuery = require('jquery');
-//window.$ = window.jQuery;
-//require('../../static/js/jquery-1.8.3.min.js')
-//require('../../static/js/jquery.elevateZoom-3.0.8.min.js')
-//require('../../static/js/jquery.elevatezoom.js')
+//var path = require('path');
 require('magnify')
 
 
@@ -44,17 +40,15 @@ export default {
   data() {
     return {currentPage: 1}
   },
-
     computed: {
      totalPages() {
        return this.numPaginas;
      },
-     /*currentPage() {
-       return 1;
-     },*/
-     selectedPage() {
+     selectedTranscription() {
        //return this.pages[this.currentPage-1]
-       return require('../../static/pueblo1/trans1.html')
+       var path = '../../static/pueblo1/trans1.html'
+       this.id = "trans2"
+       return require('../../static/pueblo1/' + this.id+ ".html")
      }
   },
   methods: {
