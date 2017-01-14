@@ -1,20 +1,17 @@
 <template>
   <div class="portada">
-    <h1>Esto es la portada</h1>
-    <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-      <div><h3>1</h3></div>
-      <div><h3>2</h3></div>
-      <div><h3>3</h3></div>
-      <div><h3>4</h3></div>
-      <div><h3>5</h3></div>
-      <div><h3>6</h3></div>
+    <div class="jumbotron">
+      <h1>Valle de La Masón</h1>
+      <h2>En el catastro del Marqués de la Ensenada</h2>
+      <p class="text-left">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Saber más</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Preguntas del catastro</a>
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-require('slick-carousel')
-
 export default {
   name: 'portada',
   components : {  },
@@ -23,5 +20,9 @@ export default {
 </script>
 
 <style>
+.jumbotron{
+  margin: 25px;
+  padding: 25px;
+}
 
 </style>
