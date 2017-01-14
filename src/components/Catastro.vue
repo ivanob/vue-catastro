@@ -46,8 +46,7 @@ export default {
      },
      selectedTranscription() {
        //return this.pages[this.currentPage-1]
-       var path = '../../static/pueblo1/trans1.html'
-       this.id = "trans2"
+       this.id = "trans" + this.currentPage
        return require('../../static/pueblo1/' + this.id+ ".html")
      }
   },
@@ -57,9 +56,6 @@ export default {
       }
   },
   mounted() {
-    console.log('HOLA')
-    console.log($(".zoom"))
-    console.log(this)
     $('#zoom_01').elevateZoom({
       zoomType: "inner",
       zoomType : "lens",
@@ -67,11 +63,6 @@ export default {
       zoomWindowFadeIn: 500,
       zoomWindowFadeOut: 750
     });
-  /*  this.$http.get('../../static/pueblo1/scan1.jpg').then((response) => {
-        console.log("BIEEN")
-      }, (response) => {
-        // error callback
-      });*/
   }
 };
 
