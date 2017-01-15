@@ -5,12 +5,11 @@
       <h1>Valle de La Masón</h1>
       <h2>En el catastro del Marqués de la Ensenada</h2>
       <p class="text-left">
-        <router-link to="/preguntas">Go to Bar</router-link>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Saber más</a>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Preguntas del catastro</a>
+        <router-link to="/informacion"><a class="btn btn-primary btn-lg" href="#" role="button">Saber más</a></router-link>
+        <router-link to="/preguntas"><a class="btn btn-primary btn-lg" href="#" role="button">Preguntas del catastro</a></router-link>
       </p>
     </div>
-<router-view></router-view>
+    
     <!-- CAROUSEL -->
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->

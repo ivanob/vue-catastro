@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Catastro :nombre="nombre" :pages="pages" :numPaginas="numPaginas"></Catastro>
+    <!--<Catastro :nombre="nombre" :pages="pages" :numPaginas="numPaginas"></Catastro>-->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -19,12 +20,7 @@ export default {
       numPaginas: info[0].paginas.length,
       pages: info[0].paginas
     };
-  },
-  /*computed: {
-    pages: function () {
-      return ["<p>Esto es la pagina 1</p>", "<p>Esto es la pagina 2</p>"]
-    }
-  }*/
+  }
 };
 </script>
 
