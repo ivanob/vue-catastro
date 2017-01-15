@@ -19,6 +19,7 @@
     "magnify": "^1.6.17",
     "vue": "^2.1.0",
     "vue-html-loader": "^1.2.3",
+    "vue-router": "^2.1.1",
     "vue-zoom": "^1.0.6"
   },
   "devDependencies": {

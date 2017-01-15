@@ -5,11 +5,12 @@
       <h1>Valle de La Masón</h1>
       <h2>En el catastro del Marqués de la Ensenada</h2>
       <p class="text-left">
+        <router-link to="/preguntas">Go to Bar</router-link>
         <a class="btn btn-primary btn-lg" href="#" role="button">Saber más</a>
         <a class="btn btn-primary btn-lg" href="#" role="button">Preguntas del catastro</a>
       </p>
     </div>
-
+<router-view></router-view>
     <!-- CAROUSEL -->
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -19,7 +20,6 @@
       <li data-target="#carousel-example-generic" data-slide-to="2"></li>
       <li data-target="#carousel-example-generic" data-slide-to="3"></li>
       <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="5"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -27,7 +27,7 @@
       <div class="item active">
         <img src="http://placehold.it/1200x315" alt="...">
         <div class="carousel-caption">
-        	<h3>Lugar de Cires</h3>
+        	<h3>Lugar de Cires <a class="btn btn-primary" href="#" role="button">Leer catastro</a></h3>
         </div>
       </div>
       <div class="item">
@@ -82,7 +82,7 @@ export default {
   padding: 25px;
 }
 #carousel-example-generic {
-  margin: 25px;
+  margin: 50px;
 }
 
 </style>

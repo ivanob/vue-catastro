@@ -2,10 +2,32 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import Portada from './components/Portada';
+import VueRouter from 'vue-router'
+import Preguntas from './components/Preguntas';
+import Informacion from './components/Informacion';
+
+Vue.use(VueRouter)
+
+const routes = [
+  { path: '/', component: Portada },
+  { path: '/informacion', component: Informacion },
+  { path: '/preguntas', component: Preguntas }
+]
+
+const router = new VueRouter({
+  routes // short for routes: routes
+})
+
+const app = new Vue({
+  router,
+  el: '#app',
+  template: '<Portada/>',
+  components: { Portada }
+}).$mount('#app')
 
 /* eslint-disable no-new */
-new Vue({
+/*new Vue({
   el: '#app',
   template: '<Portada/>',
   components: { Portada },
-});
+});*/
