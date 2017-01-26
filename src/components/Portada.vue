@@ -9,7 +9,7 @@
         <router-link to="/preguntas"><a class="btn btn-primary btn-lg" href="#" role="button">Preguntas del catastro</a></router-link>
       </p>
     </div>
-    
+
     <!-- CAROUSEL -->
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -26,7 +26,8 @@
       <div class="item active">
         <img src="http://placehold.it/1200x315" alt="...">
         <div class="carousel-caption">
-        	<h3>Lugar de Cires <a class="btn btn-primary" href="#" role="button">Leer catastro</a></h3>
+        	<h3>Lugar de Cires</h3>
+          <a class="btn btn-primary" href="#" role="button">Leer catastro</a>
         </div>
       </div>
       <div class="item">
