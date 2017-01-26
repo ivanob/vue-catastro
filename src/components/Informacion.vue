@@ -1,6 +1,6 @@
 <template>
  <div class="informacion">
-   <h1>Informacion</h1>
+   <h1>Información</h1>
    <p>
     El catastro, ordenado por Fernando VI a propuesta de su primer ministro Zenón de Somodevilla, Marqués de la Ensenada se ejecuta entre
     los años 1750 – 54 en todos los pueblos de la Corona de Castilla y consiste en un interrogatorio de cuarenta preguntas que pretende
