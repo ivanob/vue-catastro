@@ -6,13 +6,15 @@ import Portada from './components/Portada';
 import VueRouter from 'vue-router'
 import Preguntas from './components/Preguntas';
 import Informacion from './components/Informacion';
+import Catastro from './components/Catastro';
 
 Vue.use(VueRouter)
 
 const routes = [
   { path: '/', component: Portada },
   { path: '/informacion', component: Informacion },
-  { path: '/preguntas', component: Preguntas }
+  { path: '/preguntas', component: Preguntas },
+  { path: '/catastro', component: Catastro }
 ]
 
 const router = new VueRouter({

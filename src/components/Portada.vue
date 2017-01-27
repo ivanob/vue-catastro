@@ -27,7 +27,7 @@
         <img src="http://placehold.it/1200x315" alt="...">
         <div class="carousel-caption">
         	<h3>Lugar de Cires</h3>
-          <a class="btn btn-primary" href="#" role="button">Leer catastro</a>
+          <a class="btn btn-primary" role="button" v-on:click="catastroSelected">Leer catastro</a>
         </div>
       </div>
       <div class="item">
@@ -72,7 +72,12 @@
 export default {
   name: 'portada',
   components : {  },
-  props:[]
+  props:[],
+  methods: {
+    catastroSelected: function () {
+        this.$router.push({ path: '/catastro'})
+    }
+  }
 }
 </script>
 
