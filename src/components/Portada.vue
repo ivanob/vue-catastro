@@ -75,7 +75,8 @@ export default {
   props:[],
   methods: {
     catastroSelected: function () {
-        this.$router.push({ path: '/catastro'})
+        //this.$router.push({ path: '/catastro', params: {nombre:"La Penia"}})
+        this.$router.replace({ name: "catastro", params: {nombre:"La Penia"}})
     }
   }
 }
