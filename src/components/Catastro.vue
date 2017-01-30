@@ -36,23 +36,24 @@ require('magnify')
 export default {
   name: 'catastro',
   components : { Pagination },
-  props:['nombre','pages','numPaginas'],
+  props:['pages','numPaginas'],
   data() {
-    return {currentPage: 1}
+    return {currentPage: 1,
+      nombre: this.$route.params.nombre}
   },
     computed: {
      totalPages() {
-       return this.numPaginas;
+       return this.$route.params.numPaginas;
      },
      selectedTranscription() {
        //return this.pages[this.currentPage-1]
        this.id = "trans" + this.currentPage
        return require('../../static/pueblo1/' + this.id+ ".html")
-     },
+     }/*,
      nombre(){
        console.log(this.$route.params.id)
        return this.$route.params.nombre
-     }
+     }*/
   },
   methods: {
       pageOneChanged: function (pageNum) {

@@ -14,10 +14,12 @@ const routes = [
   { path: '/', component: Portada },
   { path: '/informacion', component: Informacion },
   { path: '/preguntas', component: Preguntas },
-  { name: 'catastro', path: '/catastro', component: Catastro }
+  { name: 'catastro', path: '/catastro', component: Catastro },
+  { path: '*', component: Portada }
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes // short for routes: routes
 })
 /*

@@ -69,6 +69,8 @@
 </template>
 
 <script>
+import info from '../data_catastros.json';
+
 export default {
   name: 'portada',
   components : {  },
@@ -76,7 +78,11 @@ export default {
   methods: {
     catastroSelected: function () {
         //this.$router.push({ path: '/catastro', params: {nombre:"La Penia"}})
-        this.$router.replace({ name: "catastro", params: {nombre:"La Penia"}})
+        this.$router.replace({ name: "catastro", params: {
+          nombre:info[0].nombre,
+          numPaginas: info[0].paginas.length,
+          pages: info[0].paginas
+        }})
     }
   }
 }
