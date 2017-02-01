@@ -3,16 +3,16 @@
   "nombre": "Lugar de Quintanilla",
   "paginas": [
             {
-              "scan":"static/pueblo1/scan1.jpg",
-              "transcripcion": "static/pueblo1/trans1.html"
+              "scan":"static/quintanilla/scan1.jpg",
+              "transcripcion": "static/quintanilla/trans1.html"
             },
             {
-              "scan":"static/pueblo1/scan2.jpg",
-              "transcripcion": "static/pueblo1/trans2.html"
+              "scan":"static/quintanilla/scan2.jpg",
+              "transcripcion": "static/quintanilla/trans2.html"
             },
             {
-              "scan":"static/pueblo1/scan3.jpg",
-              "transcripcion": "static/pueblo1/trans3.html"
+              "scan":"static/quintanilla/scan3.jpg",
+              "transcripcion": "static/quintanilla/trans3.html"
             }
     ]
   }
