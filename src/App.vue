@@ -13,14 +13,14 @@ export default {
   name: 'app',
   components: {
     Catastro,
-  },
-  data() {
+  }
+  /*data() {
     return {
       nombre: info[0].nombre,
       numPaginas: info[0].paginas.length,
       pages: info[0].paginas
     };
-  }
+  }*/
 };
 </script>
 

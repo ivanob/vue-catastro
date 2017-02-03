@@ -1,19 +1,7 @@
 [
   {
   "nombre": "Lugar de Quintanilla",
-  "paginas": [
-            {
-              "scan":"static/quintanilla/scan1.jpg",
-              "transcripcion": "static/quintanilla/trans1.html"
-            },
-            {
-              "scan":"static/quintanilla/scan2.jpg",
-              "transcripcion": "static/quintanilla/trans2.html"
-            },
-            {
-              "scan":"static/quintanilla/scan3.jpg",
-              "transcripcion": "static/quintanilla/trans3.html"
-            }
-    ]
+  "numPaginas": 15,
+  "folder": "quintanilla"
   }
 ]

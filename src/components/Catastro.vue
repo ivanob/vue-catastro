@@ -36,7 +36,7 @@ require('magnify')
 export default {
   name: 'catastro',
   components : { Pagination },
-  props:['pages','numPaginas'],
+  props:['nombre','numPaginas','folder'],
   data() {
     return {currentPage: 1,
       nombre: this.$route.params.nombre}
@@ -47,8 +47,8 @@ export default {
      },
      selectedTranscription() {
        //return this.pages[this.currentPage-1]
-       this.id = "trans" + this.currentPage
-       return require('../../static/pueblo1/' + this.id+ ".html")
+       console.log(this.folder)
+       return require('../../static/'+ this.$route.params.folder + '/trans' + this.currentPage + ".html")
      }/*,
      nombre(){
        console.log(this.$route.params.id)

@@ -80,8 +80,8 @@ export default {
         //this.$router.push({ path: '/catastro', params: {nombre:"La Penia"}})
         this.$router.replace({ name: "catastro", params: {
           nombre:info[0].nombre,
-          numPaginas: info[0].paginas.length,
-          pages: info[0].paginas
+          numPaginas: info[0].numPaginas,
+          folder: info[0].folder
         }})
     }
   }
