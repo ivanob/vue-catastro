@@ -8,7 +8,7 @@
    <div class="col-md-6 text-right">
      <!-- Your first column here -->
       <!--<img id="zoom_07" :src="selectedPage.scan" class="img-thumbnail" width="404" height="336" data-zoom-image="static/pueblo1/scan1.jpg">-->
-      <img id="zoom_01" src='static/pueblo1/image-small.jpg' data-zoom-image="static/pueblo1/image-big.jpg"/>
+      <img id="zoom_01" :src="selectedScan" data-zoom-image="static/pueblo1/image-big.jpg"/>
    </div>
    <div class="col-md-6 text-left">
      <!-- Your second column here -->
@@ -29,7 +29,6 @@
 
 <script lang="babel">
 import Pagination from './Pagination.vue'
-//var path = require('path');
 require('magnify')
 
 
@@ -38,22 +37,21 @@ export default {
   components : { Pagination },
   props:['nombre','numPaginas','folder'],
   data() {
-    return {currentPage: 1,
-      nombre: this.$route.params.nombre}
+    return {currentPage: 1}
   },
     computed: {
+    nombre(){
+      return this.$route.params.nombre
+    },
      totalPages() {
        return this.$route.params.numPaginas;
      },
      selectedTranscription() {
-       //return this.pages[this.currentPage-1]
-       console.log(this.folder)
        return require('../../static/'+ this.$route.params.folder + '/trans' + this.currentPage + ".html")
-     }/*,
-     nombre(){
-       console.log(this.$route.params.id)
-       return this.$route.params.nombre
-     }*/
+     },
+     selectedScan() {
+       return require('../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + ".jpg")
+     }
   },
   methods: {
       pageOneChanged: function (pageNum) {
