@@ -47,10 +47,10 @@ export default {
        return this.$route.params.numPaginas;
      },
      selectedTranscription() {
-       return require('static/'+ this.$route.params.folder + '/trans' + this.currentPage + ".html")
+       return require('../../static/'+ this.$route.params.folder + '/trans' + this.currentPage + ".html")
      },
      selectedScan() {
-       return require('static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + ".jpg")
+       return require('../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + ".jpg")
      }
   },
   methods: {
