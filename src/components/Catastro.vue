@@ -8,7 +8,7 @@
    <div class="col-md-6 text-right">
      <!-- Your first column here -->
       <!--<img id="zoom_07" :src="selectedPage.scan" class="img-thumbnail" width="404" height="336" data-zoom-image="static/pueblo1/scan1.jpg">-->
-      <img id="zoom_01" :src="selectedScan" data-zoom-image="static/pueblo1/image-big.jpg"/>
+      <img id="zoom_01" :src="selectedScanSmall" v-bind:data-zoom-image="selectedScanBig"/>
    </div>
    <div class="col-md-6 text-left">
      <!-- Your second column here -->
@@ -16,6 +16,7 @@
      <div v-html="selectedTranscription"></div>
    </div>
  </div>
+
 </div>
 
    <div class="text-center">
@@ -30,7 +31,6 @@
 <script lang="babel">
 import Pagination from './Pagination.vue'
 require('magnify')
-
 
 export default {
   name: 'catastro',
@@ -49,13 +49,33 @@ export default {
      selectedTranscription() {
        return require('../../static/'+ this.$route.params.folder + '/trans' + this.currentPage + ".html")
      },
-     selectedScan() {
-       return require('../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + ".jpg")
+     selectedScanSmall() {
+       return require('../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-small.jpg")
+     },
+     selectedScanBig() {
+       $("#zoom_01").data('zoom-image', '../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-big.jpg").elevateZoom({
+          zoomType: "inner",
+          zoomType : "lens",
+          lensShape : "round",
+          zoomWindowFadeIn: 500,
+          zoomWindowFadeOut: 750
+       });
+       return require('../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-big.jpg")
      }
   },
   methods: {
       pageOneChanged: function (pageNum) {
           this.currentPage = pageNum
+      },
+      reloadZoomImage: function(){
+        console.log("aaaa")
+        $("#zoom_01").data('zoom-image', '../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-big.jpg").elevateZoom({
+           zoomType: "inner",
+           zoomType : "lens",
+           lensShape : "round",
+           zoomWindowFadeIn: 500,
+           zoomWindowFadeOut: 750
+        });
       }
   },
   mounted() {
