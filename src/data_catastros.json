@@ -3,5 +3,25 @@
   "nombre": "Lugar de Quintanilla",
   "numPaginas": 15,
   "folder": "quintanilla"
+  },
+  {
+  "nombre": "Lugar de Cires",
+  "numPaginas": 15,
+  "folder": "cires"
+  },
+  {
+  "nombre": "Lugar de La Fuente",
+  "numPaginas": 17,
+  "folder": "lafuente"
+  },
+  {
+  "nombre": "Lugar de Sobrelapeña",
+  "numPaginas": 18,
+  "folder": "sobrelapenya"
+  },
+  {
+  "nombre": "Lugar de Rio",
+  "numPaginas": 16,
+  "folder": "rio"
   }
 ]

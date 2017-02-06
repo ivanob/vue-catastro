@@ -26,32 +26,36 @@
       <div class="item active">
         <img src="http://placehold.it/1200x315" alt="...">
         <div class="carousel-caption">
+        	<h3>Lugar de Quintanilla</h3>
+          <a class="btn btn-primary" role="button" v-on:click="catastroSelected(0)">Leer catastro</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="http://placehold.it/1200x315" alt="...">
+        <div class="carousel-caption">
         	<h3>Lugar de Cires</h3>
-          <a class="btn btn-primary" role="button" v-on:click="catastroSelected">Leer catastro</a>
+          <a class="btn btn-primary" role="button" v-on:click="catastroSelected(1)">Leer catastro</a>
         </div>
       </div>
       <div class="item">
         <img src="http://placehold.it/1200x315" alt="...">
         <div class="carousel-caption">
         	<h3>Lugar de La Fuente</h3>
+          <a class="btn btn-primary" role="button" v-on:click="catastroSelected(2)">Leer catastro</a>
         </div>
       </div>
       <div class="item">
         <img src="http://placehold.it/1200x315" alt="...">
         <div class="carousel-caption">
-        	<h3>Lugar de Quintanilla</h3>
+        	<h3>Lugar de Sobrelapeña</h3>
+          <a class="btn btn-primary" role="button" v-on:click="catastroSelected(3)">Leer catastro</a>
         </div>
       </div>
       <div class="item">
         <img src="http://placehold.it/1200x315" alt="...">
         <div class="carousel-caption">
         	<h3>Lugar de Rio</h3>
-        </div>
-      </div>
-      <div class="item">
-        <img src="http://placehold.it/1200x315" alt="...">
-        <div class="carousel-caption">
-        	<h3>Lugar de Sobrepeña</h3>
+          <a class="btn btn-primary" role="button" v-on:click="catastroSelected(4)">Leer catastro</a>
         </div>
       </div>
     </div>
@@ -76,12 +80,12 @@ export default {
   components : {  },
   props:[],
   methods: {
-    catastroSelected: function () {
+    catastroSelected: function (i) {
         //this.$router.push({ path: '/catastro', params: {nombre:"La Penia"}})
         this.$router.replace({ name: "catastro", params: {
-          nombre:info[0].nombre,
-          numPaginas: info[0].numPaginas,
-          folder: info[0].folder
+          nombre:info[i].nombre,
+          numPaginas: info[i].numPaginas,
+          folder: info[i].folder
         }})
     }
   }
