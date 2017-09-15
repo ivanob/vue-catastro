@@ -34,13 +34,13 @@ require('magnify')
 export default {
   name: 'catastro',
   components : { Pagination },
-  props:['nombre','numPaginas','folder'],
+  props:['nombrePueblo','numPaginas','folder'],
   data() {
     return {currentPage: 1}
   },
     computed: {
     nombre(){
-      return this.$route.params.nombre
+      return this.$route.params.nombrePueblo
     },
      totalPages() {
        return this.$route.params.numPaginas;
