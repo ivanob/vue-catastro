@@ -38,10 +38,15 @@ export default {
   data() {
     return {currentPage: 1}
   },
-    computed: {
-    nombre(){
-      return this.$route.params.nombrePueblo
-    },
+  created() {
+    // `this` points to the vm instance
+    //if(this.$route.params.name === undefined) this.$router.push({name:"error"});
+    //else this.$route.params;
+  },
+  computed: {
+      nombre(){
+        return this.$route.params.nombrePueblo
+      },
      totalPages() {
        return this.$route.params.numPaginas;
      },
@@ -52,21 +57,21 @@ export default {
        return require('../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-small.jpg")
      },
      selectedScanBig() {
-       $("#zoom_01").data('zoom-image', '../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-big.jpg").elevateZoom({
+       /*$("#zoom_01").data('zoom-image', '../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-big.jpg").elevateZoom({
           zoomType: "inner",
           zoomType : "lens",
           lensShape : "round",
           zoomWindowFadeIn: 500,
           zoomWindowFadeOut: 750
-       });
+       });*/
        return require('../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-big.jpg")
      }
   },
   methods: {
       pageOneChanged: function (pageNum) {
           this.currentPage = pageNum
-      },
-      reloadZoomImage: function(){
+      }
+      /*reloadZoomImage: function(){
         console.log("aaaa")
         $("#zoom_01").data('zoom-image', '../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-big.jpg").elevateZoom({
            zoomType: "inner",
@@ -75,16 +80,18 @@ export default {
            zoomWindowFadeIn: 500,
            zoomWindowFadeOut: 750
         });
-      }
+      }*/
   },
   mounted() {
-    $('#zoom_01').elevateZoom({
+    if(this.$route.params.nombrePueblo === undefined) this.$router.replace({path:"/"});
+
+    /*$('#zoom_01').elevateZoom({
       zoomType: "inner",
       zoomType : "lens",
       lensShape : "round",
       zoomWindowFadeIn: 500,
       zoomWindowFadeOut: 750
-    });
+    });*/
   }
 };
 

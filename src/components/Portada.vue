@@ -82,7 +82,7 @@ export default {
   methods: {
     catastroSelected: function (i) {
         //this.$router.push({ path: '/catastro', params: {nombre:"La Penia"}})
-        this.$router.replace({ name: "catastro", params: {
+        this.$router.push({ name: "catastro", params: {
           nombrePueblo:info[i].nombre,
           numPaginas: info[i].numPaginas,
           folder: info[i].folder
