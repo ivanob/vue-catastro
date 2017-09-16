@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!--<Catastro :nombre="nombre" :pages="pages" :numPaginas="numPaginas"></Catastro>-->
     <router-view></router-view>
   </div>
 </template>
@@ -14,13 +13,6 @@ export default {
   components: {
     Catastro,
   }
-  /*data() {
-    return {
-      nombre: info[0].nombre,
-      numPaginas: info[0].paginas.length,
-      pages: info[0].paginas
-    };
-  }*/
 };
 </script>
 

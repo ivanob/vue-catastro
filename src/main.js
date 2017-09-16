@@ -22,13 +22,6 @@ const router = new VueRouter({
   //mode: 'history',
   routes // short for routes: routes
 })
-/*
-const app = new Vue({
-  router,
-  el: '#app',
-  template: '<Portada/>',
-  components: { Portada }
-}).$mount('#app')*/
 
 /* THIS IS POINTING TO APP (add the include) */
 const app = new Vue({
@@ -37,11 +30,3 @@ const app = new Vue({
   template: '<app/>',
   components: { App }
 }).$mount('#app')
-
-
-/* eslint-disable no-new */
-/*new Vue({
-  el: '#app',
-  template: '<Portada/>',
-  components: { Portada },
-});*/
