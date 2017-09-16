@@ -20,7 +20,7 @@
     "vue": "^2.1.0",
     "vue-html-loader": "^1.2.3",
     "vue-router": "^2.1.1",
-    "vue-zoom": "^1.0.6"
+    "zooming": "^1.2.4"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",

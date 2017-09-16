@@ -8,7 +8,8 @@
    <div class="col-md-8 text-right">
      <!-- Your first column here -->
       <!--<img id="zoom_07" :src="selectedPage.scan" class="img-thumbnail" width="404" height="336" data-zoom-image="static/pueblo1/scan1.jpg">-->
-      <img id="zoom_01" :src="selectedScanSmall" v-bind:data-zoom-image="selectedScanBig"/>
+      <!--<img id="zoom_01" :src="selectedScanSmall" v-bind:data-zoom-image="selectedScanBig"/>-->
+      <img :src="selectedScanSmall" data-action="zoom" v-bind:data-original="selectedScanBig" />
    </div>
    <div class="col-md-4 text-left">
      <!-- Your second column here -->
@@ -29,7 +30,7 @@
 
 <script lang="babel">
 import Pagination from './Pagination.vue'
-require('magnify')
+import Zooming from 'zooming'
 
 export default {
   name: 'catastro',
@@ -57,13 +58,6 @@ export default {
        return require('../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-small.jpg")
      },
      selectedScanBig() {
-       /*$("#zoom_01").data('zoom-image', '../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-big.jpg").elevateZoom({
-          zoomType: "inner",
-          zoomType : "lens",
-          lensShape : "round",
-          zoomWindowFadeIn: 500,
-          zoomWindowFadeOut: 750
-       });*/
        return require('../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-big.jpg")
      }
   },
@@ -71,27 +65,12 @@ export default {
       pageOneChanged: function (pageNum) {
           this.currentPage = pageNum
       }
-      /*reloadZoomImage: function(){
-        console.log("aaaa")
-        $("#zoom_01").data('zoom-image', '../../static/'+ this.$route.params.folder + '/images/scan' + this.currentPage + "-big.jpg").elevateZoom({
-           zoomType: "inner",
-           zoomType : "lens",
-           lensShape : "round",
-           zoomWindowFadeIn: 500,
-           zoomWindowFadeOut: 750
-        });
-      }*/
   },
   mounted() {
+    const zooming = new Zooming()
+    zooming.listen('.img-zoomable')
     if(this.$route.params.nombrePueblo === undefined) this.$router.replace({path:"/"});
 
-    /*$('#zoom_01').elevateZoom({
-      zoomType: "inner",
-      zoomType : "lens",
-      lensShape : "round",
-      zoomWindowFadeIn: 500,
-      zoomWindowFadeOut: 750
-    });*/
   }
 };
 
