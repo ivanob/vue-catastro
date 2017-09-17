@@ -1,7 +1,6 @@
 # catastro
 
-> A Vue.js project
-You can find this app deployed here: https://catastros.herokuapp.com/
+> You can find this app deployed here: https://catastros.herokuapp.com/
 
 ## Build Setup
 
