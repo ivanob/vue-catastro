@@ -2,7 +2,8 @@
  <div class="informacion">
    <h1>Información</h1>
    <a class="btn btn-primary" role="button" v-on:click="backToPortrait()">Volver a portada</a>
-   <div>
+   <div class="panel panel-default">
+   <div class="panel-body">
    <p>
     El catastro, ordenado por Fernando VI a propuesta de su primer ministro Zenón de Somodevilla, Marqués de la Ensenada se ejecuta entre
     los años 1750 – 54 en todos los pueblos de la Corona de Castilla y consiste en un interrogatorio de cuarenta preguntas que pretende
@@ -45,6 +46,8 @@
      porque si bien la Real Academia de la Lengua se funda en 1713 a mediados de siglo aún no había conseguido aplicar la unidad de
      criterios en el uso y evolución del idioma que ahora sí tenemos y no siempre valoramos en su justa medida.</p>
    </div>
+   </div>
+   </div>
  </div>
 </template>
 
@@ -61,4 +64,10 @@ export default {
 </script>
 
 <style>
+.panel {
+  margin: 50px;
+}
+.panel-body {
+  padding: 50px;
+}
 </style>
