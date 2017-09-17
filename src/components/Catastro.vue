@@ -4,22 +4,24 @@
    <h1>{{nombre}}</h1>
    <a class="btn btn-primary" role="button" v-on:click="backToPortrait()">Volver a portada</a>
  </div>
-<div class="wrapper container">
- <div class="modal-body row">
-   <div class="col-md-8 text-right">
-     <img :src="selectedScanSmall" data-action="zoom" v-bind:data-original="selectedScanBig" />
+ <div id="catastro-body">
+  <div class="wrapper container">
+   <div class="modal-body row">
+     <div class="col-md-8 text-right">
+       <img :src="selectedScanSmall" data-action="zoom" v-bind:data-original="selectedScanBig" />
+     </div>
+     <div class="col-md-4 text-left">
+       <div v-html="selectedTranscription"></div>
+     </div>
    </div>
-   <div class="col-md-4 text-left">
-     <div v-html="selectedTranscription"></div>
-   </div>
- </div>
 
-</div>
-   <div class="text-center">
-     <pagination :current-page="currentPage"
-                   :total-pages="totalPages"
-                   @page-changed="pageOneChanged">
-       </pagination>
+  </div>
+     <div class="text-center">
+       <pagination :current-page="currentPage"
+                     :total-pages="totalPages"
+                     @page-changed="pageOneChanged">
+         </pagination>
+     </div>
    </div>
   </div>
 </template>
@@ -66,6 +68,10 @@ export default {
     if(this.$route.params.nombrePueblo === undefined) this.$router.replace({path:"/"});
   }
 };
-
-
 </script>
+
+<style>
+#catastro-body{
+  background-color: white;
+}
+</style>

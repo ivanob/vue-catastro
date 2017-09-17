@@ -4,7 +4,7 @@
     <div class="jumbotron">
       <h1>Valle de La Masón</h1>
       <h2>En el catastro del Marqués de la Ensenada</h2>
-      <p class="text-left">
+      <p class="left">
         <router-link to="/informacion"><a class="btn btn-primary btn-lg" href="#" role="button">Saber más</a></router-link>
         <router-link to="/preguntas"><a class="btn btn-primary btn-lg" href="#" role="button">Preguntas del catastro</a></router-link>
       </p>
@@ -27,35 +27,35 @@
         <img src="http://placehold.it/1200x315" alt="...">
         <div class="carousel-caption">
         	<h3>Lugar de Quintanilla</h3>
-          <a class="btn btn-primary" role="button" v-on:click="catastroSelected(0)">Leer catastro</a>
+          <a id="catastro-selector" class="btn btn-primary" role="button" v-on:click="catastroSelected(0)">Leer catastro</a>
         </div>
       </div>
       <div class="item">
         <img src="http://placehold.it/1200x315" alt="...">
         <div class="carousel-caption">
         	<h3>Lugar de Cires</h3>
-          <a class="btn btn-primary" role="button" v-on:click="catastroSelected(1)">Leer catastro</a>
+          <a id="catastro-selector" class="btn btn-primary" role="button" v-on:click="catastroSelected(1)">Leer catastro</a>
         </div>
       </div>
       <div class="item">
         <img src="http://placehold.it/1200x315" alt="...">
         <div class="carousel-caption">
         	<h3>Lugar de La Fuente</h3>
-          <a class="btn btn-primary" role="button" v-on:click="catastroSelected(2)">Leer catastro</a>
+          <a id="catastro-selector" class="btn btn-primary" role="button" v-on:click="catastroSelected(2)">Leer catastro</a>
         </div>
       </div>
       <div class="item">
         <img src="http://placehold.it/1200x315" alt="...">
         <div class="carousel-caption">
         	<h3>Lugar de Sobrelapeña</h3>
-          <a class="btn btn-primary" role="button" v-on:click="catastroSelected(3)">Leer catastro</a>
+          <a id="catastro-selector" class="btn btn-primary" role="button" v-on:click="catastroSelected(3)">Leer catastro</a>
         </div>
       </div>
       <div class="item">
         <img src="http://placehold.it/1200x315" alt="...">
         <div class="carousel-caption">
         	<h3>Lugar de Rio</h3>
-          <a class="btn btn-primary" role="button" v-on:click="catastroSelected(4)">Leer catastro</a>
+          <a id="catastro-selector" class="btn btn-primary" role="button" v-on:click="catastroSelected(4)">Leer catastro</a>
         </div>
       </div>
     </div>
@@ -100,5 +100,7 @@ export default {
 #carousel-example-generic {
   margin: 50px;
 }
-
+#catastro-selector{
+  margin: 10px;
+}
 </style>

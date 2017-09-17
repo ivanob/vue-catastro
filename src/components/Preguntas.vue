@@ -3,7 +3,7 @@
       <h1>Preguntas en el catastro Marques de la Ensenada (1750-53)</h1>
       <a class="btn btn-primary" role="button" v-on:click="backToPortrait()">Volver a portada</a>
       <div class="panel panel-default">
-          <div class="panel-body">
+        <div class="panel-body">
         <ol class="text-justify">
           <li>
             Cómo se llama la población  
