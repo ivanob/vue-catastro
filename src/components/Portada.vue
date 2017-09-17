@@ -24,35 +24,35 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="http://placehold.it/1200x315" alt="...">
+        <img src="static/portraits/quintanilla.jpg" style="width:100%;">
         <div class="carousel-caption">
         	<h3>Lugar de Quintanilla</h3>
           <a id="catastro-selector" class="btn btn-primary" role="button" v-on:click="catastroSelected(0)">Leer catastro</a>
         </div>
       </div>
       <div class="item">
-        <img src="http://placehold.it/1200x315" alt="...">
+        <img src="static/portraits/cires.jpg" style="width:100%;">
         <div class="carousel-caption">
         	<h3>Lugar de Cires</h3>
           <a id="catastro-selector" class="btn btn-primary" role="button" v-on:click="catastroSelected(1)">Leer catastro</a>
         </div>
       </div>
       <div class="item">
-        <img src="http://placehold.it/1200x315" alt="...">
+        <img src="static/portraits/lafuente.jpg" style="width:100%;">
         <div class="carousel-caption">
         	<h3>Lugar de La Fuente</h3>
           <a id="catastro-selector" class="btn btn-primary" role="button" v-on:click="catastroSelected(2)">Leer catastro</a>
         </div>
       </div>
       <div class="item">
-        <img src="http://placehold.it/1200x315" alt="...">
+        <img src="static/portraits/sobrelapena.jpg" style="width:100%;">
         <div class="carousel-caption">
         	<h3>Lugar de Sobrelapeña</h3>
           <a id="catastro-selector" class="btn btn-primary" role="button" v-on:click="catastroSelected(3)">Leer catastro</a>
         </div>
       </div>
       <div class="item">
-        <img src="http://placehold.it/1200x315" alt="...">
+        <img src="static/portraits/rio.jpg" style="width:100%;">
         <div class="carousel-caption">
         	<h3>Lugar de Rio</h3>
           <a id="catastro-selector" class="btn btn-primary" role="button" v-on:click="catastroSelected(4)">Leer catastro</a>
