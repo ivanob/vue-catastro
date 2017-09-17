@@ -1,6 +1,8 @@
 <template>
   <div class="preguntas">
       <h1>Preguntas en el catastro Marques de la Ensenada (1750-53)</h1>
+      <a class="btn btn-primary" role="button" v-on:click="backToPortrait()">Volver a portada</a>
+      <div>
       <ol>
         <li>
           Cómo se llama la población  
@@ -98,10 +100,20 @@
         <li>Si el rey tiene en el término o pueblo alguna finca o renta, que no corresponda a las generales ni a las provinciales, que
           deben extinguirse; cuáles son, cómo se administran y cuánto producen.</li>
       </ol>
+    </div>
   </div>
 </template>
 
 <script>
+export default {
+  name: 'catastro',
+  components : {},
+  methods: {
+    backToPortrait: function() {
+      this.$router.replace({path:"/"});
+    }
+  }
+}
 </script>
 
 <style>
