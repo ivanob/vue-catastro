@@ -11,7 +11,8 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs",
     "postinstall": "npm run build",
-    "start": "node server.js"
+    "start": "node server.js",
+    "prod": "heroku config:set NPM_CONFIG_PRODUCTION=false && git push heroku master"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
