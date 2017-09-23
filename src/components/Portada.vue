@@ -4,6 +4,7 @@
     <div class="jumbotron">
       <h1>Valle de La Masón</h1>
       <h2>En el catastro del Marqués de la Ensenada</h2>
+      <h4>Por Ángel Obeso González</h4>
       <p class="left">
         <router-link to="/informacion"><a class="btn btn-primary btn-lg" href="#" role="button">Saber más</a></router-link>
         <router-link to="/preguntas"><a class="btn btn-primary btn-lg" href="#" role="button">Preguntas del catastro</a></router-link>
