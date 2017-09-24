@@ -8,6 +8,7 @@
       <p class="left">
         <router-link to="/informacion"><a class="btn btn-primary btn-lg" href="#" role="button">Saber más</a></router-link>
         <router-link to="/preguntas"><a class="btn btn-primary btn-lg" href="#" role="button">Preguntas del catastro</a></router-link>
+        <router-link to="/valle"><a class="btn btn-primary btn-lg" href="#" role="button">El valle</a></router-link>
       </p>
     </div>
 

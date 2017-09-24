@@ -7,6 +7,7 @@ import VueRouter from 'vue-router'
 import Preguntas from './components/Preguntas';
 import Informacion from './components/Informacion';
 import Catastro from './components/Catastro';
+import Valle from './components/Valle';
 
 Vue.use(VueRouter)
 
@@ -14,6 +15,7 @@ const routes = [
   { path: '/', component: Portada },
   { path: '/informacion', component: Informacion },
   { path: '/preguntas', component: Preguntas },
+  { path: '/valle', component: Valle },
   { name: 'catastro', path: '/catastro', component: Catastro },
   { path: '*', component: Portada }
 ]
